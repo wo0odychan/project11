@@ -167,24 +167,37 @@
     }
 }
 
-.about .tit {
-    font-size: 32px;
-    margin: 0 auto 30px auto;
+.collections {
+    position: relative;
+    background: url(../images/collection.png) no-repeat center right;
 }
 
-.about .content {
+.collections .tit {
+    position: absolute;
+    top: 18%;
+    left: 130px;
+    padding: 15px 15px 60px 450px;
+    font-size: 32px;
+    font-weight: 800;
+    font-family: 'Noto Serif KR';
+    background: #fff;
+
+
+}
+
+.collections .content {
     display: flex;
     gap: 60px;
 }
 
-.about .content .left {
-    width: 100%;
-    object-fit: cover;
+.collections .content {
+    background: #FF5492;
+    height: 100%;
+    width: 50%;
 }
 
-.about .content .left img {
-    height: 600px;
-}
+.collections .content .txt {}
+
 
 
 .about .content .right {
