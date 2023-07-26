@@ -33,7 +33,7 @@ $(function () {
         css3: false,
         responsiveWidth: 700,
         scrollOverflow: true,
-
+        easing: 'easeOutQuad',
         afterRender: function () {
             $('.Main__content .section').eq(0).addClass('on');
         },
