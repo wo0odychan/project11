@@ -507,9 +507,8 @@
 }
 
 .best .content .itm .img_box {
-    height: 550px;
     width: 450px;
-    padding: 25px;
+    padding: 25px 25px 40px 25px;
     border-radius: 20px;
 }
 
@@ -757,6 +756,7 @@
     .header .header_wrap {
         margin: 0;
         width: 100%;
+        height: 60px;
     }
 
     .header h1 {
@@ -764,7 +764,7 @@
         z-index: 1000;
     }
 
-    .gnb {
+    .header .gnb {
         position: fixed;
         top: 0;
         left: -100%;
@@ -776,13 +776,13 @@
 
     }
 
-    .gnb.on {
+    .header .gnb.on {
         left: 0;
 
     }
 
 
-    .gnb ul {
+    .header .gnb ul {
         flex-direction: column;
         padding: 100px 20px 0 20px;
     }
@@ -790,8 +790,12 @@
     .header .gnb .main_menu>li {
         padding: 15px 0;
         margin: 0 0 10px 0;
+        font-size: 20px;
         font-weight: 400;
     }
+
+
+
 
     .header .gnb .main_menu:hover {
         color: #222;
@@ -812,25 +816,39 @@
         top: 0;
         left: 0;
         transform: translate(0, 0);
-        padding: 0;
+        padding: 10px 0 20px 0;
         margin: 15px 0 0 0;
         background: #f9f9f9;
+        border-top: 5px solid #ddd;
+        border-right: 5px solid #ccc;
+        border-radius: 5px 0 5px 0;
     }
 
     .header .gnb>ul>li:hover .sub_menu {
         display: none;
     }
 
+    .header .gnb>ul>li .sub_menu li {
+        border-bottom: 1px solid #ddd;
+        margin: 0 8px
+    }
+
+    .header .gnb>ul>li .sub_menu li~li {
+        padding: 8px 0 0 0;
+
+    }
+
     .header .gnb>ul>li .sub_menu a {
         padding: 0 0 0 15px;
         color: #222;
+
     }
 
 
     .mobile_btn {
         display: block;
         position: fixed;
-        top: 15px;
+        top: 9px;
         right: 0;
         z-index: 1000;
     }
@@ -867,7 +885,6 @@
 
 
     .main {
-        position: relative;
         background: url(../images/main_m.png) no-repeat left 43% center/cover;
     }
 
@@ -876,19 +893,14 @@
     }
 
     .collections {
-        position: relative;
         background: url(../images/collection.png) no-repeat center center/cover;
     }
 
     .collections .tit {
-        position: absolute;
         top: 0;
         left: 30px;
         padding: 15px 0 40px 20px;
         font-size: 24px;
-        font-weight: 800;
-        font-family: 'Noto Serif KR';
-        background: #fff;
         line-height: 1.2;
         transform: translate(0, 0);
         opacity: 1;
@@ -897,18 +909,13 @@
     .collections .content {
         position: absolute;
         display: block;
-        gap: 0px;
         bottom: 0;
-        background: #FF5492;
         height: 180px;
         width: 100%;
     }
 
     .collections .content .left {
-        display: flex;
-        flex-direction: column;
         padding: 0;
-        font-weight: 600;
     }
 
 
@@ -925,66 +932,40 @@
     }
 
     .collections .content .left strong {
-        position: relative;
-        display: block;
-        margin: 0 0 20px 0;
-        color: #d10259;
         font-size: 20px;
 
 
     }
 
     .collections .content .left strong::before {
-        content: "";
-        position: absolute;
-        top: -100%;
-        left: 2px;
         width: 100px;
-        height: 3px;
-        background: #fff;
+
     }
 
 
     .collections .content .left p {
-        color: #fff;
         font-size: 24px;
-        line-height: 1.2;
     }
 
 
     .bag01 {
-        position: relative;
         background: url(../images/content01_m.jpg) no-repeat center/cover;
 
     }
 
     .bag01 .c_tit {
-        position: absolute;
-        bottom: 100px;
-        right: 75px;
-        font-size: 24px;
-        font-weight: 600;
-        color: #d10259;
-
-
         display: none;
     }
 
     .bag01 .content {
-        position: absolute;
         top: auto;
         bottom: 0;
         height: 200px;
         width: 100%;
         display: block;
-        background: #fff;
     }
 
     .bag01 .content .tit {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: right;
         max-width: 1700px;
         margin: 0 auto;
         padding: 35px 15px 0 15px;
@@ -1000,113 +981,67 @@
     }
 
     .bag01 .content .tit h2 {
-        position: relative;
-        color: #FF77A8;
         font-weight: 500;
         font-size: 28px;
-        margin: 0 0 20px 0;
     }
 
     .bag01 .content .tit h2::before {
-        content: "";
-        position: absolute;
         top: -20%;
         right: 0;
         width: 100px;
-        height: 3px;
-        background: #d10259;
     }
 
 
     .bag01 .content .tit p {
-        font-size: 14px;
         line-height: 1.2;
     }
 
     .bag01 .detail {
-        overflow: hidden;
-        position: absolute;
         top: 53%;
         bottom: auto;
         left: 15px;
         width: 150px;
         border: 1px solid #FF77A8;
-        border-radius: 50%;
         opacity: 1;
 
     }
 
-    .bag01 .detail figure {
-        position: relative;
-    }
 
     .bag01 .detail .cover {
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
         transform: translate(-50%, -50%);
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
         background: #ffffff65;
-
-        transition: 1s;
     }
 
-    .bag01 .detail:hover .cover {
-        transform: translate(-50%, -50%);
-    }
 
     .bag01 .detail .cover p {
         overflow: visible;
-        position: absolute;
-        display: block;
         top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 100%;
-        text-align: center;
         color: #FF77A8;
         font-size: 20px;
         font-weight: 500;
-        transition: 0.8s;
     }
 
-    .bag01 .detail:hover .cover p {
-        transform: translate(-50%, -50%);
-    }
 
     .bag02 {
-        position: relative;
         background: url(../images/content02_m.png) no-repeat center center/cover;
 
     }
 
     .bag02 .c_tit {
-        position: absolute;
-        top: 30%;
-        left: 75px;
-        font-size: 24px;
-        font-weight: 600;
-        color: #d10259;
-
         display: none;
     }
 
     .bag02 .content {
-        position: absolute;
         top: auto;
         bottom: 0;
         height: 220px;
         width: 100%;
         display: block;
-        background: #FF77A8;
     }
 
     .bag02 .content .tit {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         text-align: left;
         max-width: 1700px;
@@ -1124,102 +1059,62 @@
     }
 
     .bag02 .content .tit h2 {
-        position: relative;
-        color: #fff;
         font-weight: 500;
         font-size: 28px;
-        margin: 0 0 20px 0;
     }
 
     .bag02 .content .tit h2::before {
-        content: "";
-        position: absolute;
         top: -20%;
         left: 0;
         width: 100px;
-        height: 3px;
-        background: #d10259;
     }
 
 
     .bag02 .content .tit p {
-        font-size: 14px;
         line-height: 1.2;
     }
 
     .bag02 .detail {
-        overflow: hidden;
-        position: absolute;
         top: 50%;
         bottom: auto;
         right: 15px;
         width: 150px;
         border: 1px solid #fff;
-        border-radius: 50%;
         opacity: 1;
     }
 
-    .bag02 .detail figure {
-        position: relative;
-    }
 
     .bag02 .detail .cover {
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
         transform: translate(-50%, -50%);
-        height: 100%;
-        width: 100%;
         border-radius: 50%;
         background: #ffffff65;
-        transition: 1s;
     }
 
-    .bag02 .detail:hover .cover {
-        transform: translate(-50%, -50%);
-    }
 
     .bag02 .detail .cover p {
         overflow: visible;
-        position: absolute;
-        display: block;
         top: 60%;
-        left: 50%;
         transform: translate(-50%, -50%);
-        width: 100%;
-        text-align: center;
-        color: #FF77A8;
         font-size: 20px;
         font-weight: 500;
-        transition: 0.8s;
     }
 
-    .bag02 .detail:hover .cover p {
-        transform: translate(-50%, -50%);
-    }
 
     .best {
-        position: relative;
         background: linear-gradient(45deg, #fff 40%, #FF77A8 40%, #FF77A8 70%, #fff 70%);
     }
 
     .best .content {
-        display: flex;
         flex-direction: column;
         gap: 80px;
         margin: 0 auto;
     }
 
     .best .content .itm .img_box {
-        height: 400px;
         width: 100%;
-        padding: 25px;
-        border-radius: 20px;
     }
 
     .best .content .itm .img_box img {
-        border-radius: 10px;
         margin: 0 0 20px 0;
     }
 
@@ -1227,160 +1122,83 @@
         display: block;
         text-align: center;
         font-size: 20px;
-        font-weight: 600;
         margin: 0 0 50px 0;
     }
 
     .best .content .itm01 .img_box {
-        background: #FF77A8;
         border: 1px solid #fff;
     }
 
-    .best .content .itm01 .img_box .txt {
-        color: #fff;
-    }
 
     .best .content .itm01 .img_box .txt a {
-        display: block;
         width: 200px;
-        height: 40px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 10px 20px 8px 25px;
-        font-size: 20px;
-        font-weight: 300;
         border: none;
-        border-radius: 25px;
         background: #fff;
         color: #d10259;
 
     }
-
-    .best .content .itm01 .img_box .txt a:hover {
-        background: #fff;
-        color: #d10259;
-        transition: 0.5s;
-    }
-
 
     .best .content .itm02 .img_box {
-        background: #fff;
         border: 1px solid #FF77A8;
-    }
-
-    .best .content .itm02 .img_box .txt {
-        color: #d10259;
     }
 
     .best .content .itm02 .img_box .txt a {
         display: block;
         width: 200px;
-        height: 40px;
-        margin: 0 auto;
-        text-align: center;
-        padding: 10px 20px 8px 25px;
-        font-size: 20px;
-        font-weight: 300;
         border: none;
-        border-radius: 25px;
         background: #d10259;
         color: #fff;
-    }
-
-    .best .content .itm02 .img_box .txt a:hover {
-        background: #d10259;
-        color: #fff;
-        transition: 0.5s;
     }
 
     .best .content .itm03 {
-        display: flex;
         width: 100%;
 
     }
 
     .best .content .itm03 .tit {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         gap: 100px;
     }
 
     .best .content .itm03 .tit h2 {
-        position: relative;
-        line-height: 1.2;
         font-size: 28px;
-        font-weight: 600;
         margin: 0 auto;
     }
 
     .best .content .itm03 .tit h2::after {
-        content: "";
-        position: absolute;
         bottom: -45%;
         left: 2px;
-        width: 150px;
-        height: 3px;
-        background: #d10259;
-    }
-
-    .best .content .itm03 .tit a {
-        position: relative;
-        text-align: right;
-        font-size: 36px;
-        font-weight: 500;
     }
 
     .best .content .itm03 .tit a::before {
-        content: "";
-        position: absolute;
-        top: 60%;
         left: auto;
         right: 32%;
         width: 200px;
-        height: 1px;
-        background: #111;
-        transition: 1s;
     }
 
     .best.on .content .itm03 .tit a::before {
-        top: 60%;
         left: auto;
         right: 32%;
 
     }
 
     .best .content .itm03 .tit a::after {
-        content: "";
-        position: absolute;
-        top: 52%;
         left: 65%;
-        width: 10px;
-        transform: rotate(30deg);
-        height: 1px;
-        background: #111;
-        transition: 1s;
     }
 
     .best.on .content .itm03 .tit a::after {
-        top: 52%;
         left: 65%;
     }
 
     .new {
-        position: relative;
         background: url(../images/new01_m.jpg) no-repeat center center/cover;
     }
 
     .new .content .tit {
-        position: absolute;
-        text-align: right;
         width: 100%;
         top: 50%;
         right: auto;
         left: 45%;
-        transform: translate(-50%, -50%);
-        color: #fff;
     }
 
     .new .content .tit h2 {
@@ -1389,37 +1207,17 @@
     }
 
     .new .content .tit a {
-        align-items: center;
-        padding: 2px 60px 2px 63px;
         font-size: 24px;
-        font-weight: 300;
         border: none;
-        border-radius: 50px;
-        transition: 0.5s;
         background: #111;
-    }
-
-    .new .content .tit a:hover {
-        border: 1px solid #111;
-        background: #111;
-    }
-
-
-    .footer {
-        background-color: #f9f9f9;
-        padding: 30px 0;
     }
 
     .footer .inner {
-        display: flex;
         flex-direction: column;
-        height: 100%;
         line-height: 1.4;
     }
 
     .footer .inner .company strong {
-        display: block;
-        color: #333;
         margin: 0 0 15px 0;
     }
 
@@ -1433,20 +1231,8 @@
 
     .footer .inner .company ul li {
         width: 350px;
-        color: #888;
     }
 
-    .footer .inner .company ul li span {
-        color: #666;
-        margin: 0 8px 0 0;
-    }
-
-    .footer .inner .company .copy {
-        color: #888;
-        font-size: 14px;
-        border-top: 1px solid #666;
-        padding: 10px 0 0 0;
-    }
 
     .footer .inner .sns {
         display: none;
