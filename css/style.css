@@ -265,15 +265,8 @@
     text-align: right;
     padding: 0 75px 0 50px;
 
-    opacity: 0;
-    transform: translate(100%, 0);
-    transition: 1.5s;
 }
 
-.bag01.on .content .tit {
-    opacity: 1;
-    transform: translate(0, 0);
-}
 
 
 
@@ -283,7 +276,13 @@
     font-weight: 300;
     color: #d10259;
     margin: 0 0 8px 0;
+    opacity: 0;
+    transition: 1.5s 1.5s;
 
+}
+
+.bag01.on .content .tit span {
+    opacity: 1;
 }
 
 .bag01 .content .tit h2 {
@@ -292,6 +291,15 @@
     font-weight: 600;
     font-size: 36px;
     margin: 0 0 20px 0;
+    opacity: 0;
+    transform: translate(100%, 0);
+    transition: 1s;
+}
+
+
+.bag01.on .content .tit h2 {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .bag01 .content .tit h2::before {
@@ -308,7 +316,17 @@
 .bag01 .content .tit p {
     font-size: 14px;
     line-height: 1.4;
+    opacity: 0;
+    transform: translate(100%, 0);
+    transition: 1s 0.8s;
 }
+
+
+.bag01.on .content .tit p {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 
 .bag01 .detail {
     overflow: hidden;
@@ -317,7 +335,7 @@
     left: 80px;
     border-radius: 50%;
     opacity: 0;
-    transition: 0.8s 1s;
+    transition: 0.8s 1.5s;
 }
 
 .bag01.on .detail {
@@ -396,16 +414,7 @@
     justify-content: flex-end;
     padding: 0 50px 100px 80px;
 
-    opacity: 0;
-    transform: translate(-100%, 0);
-    transition: 1.5s;
 }
-
-.bag02.on .content .tit {
-    opacity: 1;
-    transform: translate(0, 0);
-}
-
 
 
 .bag02 .content .tit span {
@@ -413,7 +422,13 @@
     font-weight: 300;
     color: #d10259;
     margin: 0 0 8px 0;
+    opacity: 0;
+    transition: 1.5s 1.5s;
 
+}
+
+.bag02.on .content .tit span {
+    opacity: 1;
 }
 
 .bag02 .content .tit h2 {
@@ -422,7 +437,17 @@
     font-weight: 600;
     font-size: 36px;
     margin: 0 0 20px 0;
+
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: 1s;
 }
+
+.bag02.on .content .tit h2 {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 
 .bag02 .content .tit h2::before {
     content: "";
@@ -438,16 +463,24 @@
 .bag02 .content .tit p {
     font-size: 14px;
     line-height: 1.4;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: 1s 0.8s;
+}
+
+.bag02.on .content .tit p {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .bag02 .detail {
     overflow: hidden;
     position: absolute;
-    bottom: 95px;
+    bottom: 90px;
     right: 70px;
     border-radius: 50%;
     opacity: 0;
-    transition: 0.8s 1s;
+    transition: 0.8s 1.5s;
 }
 
 .bag02.on .detail {
@@ -617,7 +650,9 @@
     text-align: right;
     font-size: 36px;
     font-weight: 500;
+
 }
+
 
 .best .content .itm03 .tit a::before {
     content: "";
@@ -662,20 +697,37 @@
     position: absolute;
     text-align: right;
     top: 50%;
-    right: -9%;
+    right: -10%;
     transform: translate(-50%, -50%);
     color: #fff;
 }
 
 .new .content .tit h2 {
-    font-size: 80px;
-    margin: 0 0 50px 0;
+    display: block;
+    color: #fff;
+    font-size: 88px;
+    font-weight: 600;
+    width: 100%;
+    margin: 0 0 40px 0;
 }
+
+.new.on .content .tit h2 {
+    animation: tp 1s steps(50);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes tp {
+    from {
+        width: 0
+    }
+}
+
 
 .new .content .tit a {
     align-items: center;
     padding: 2px 60px 2px 63px;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 300;
     border: 1px solid #fff;
     border-radius: 50px;
@@ -1204,6 +1256,10 @@
     .new .content .tit h2 {
         font-size: 40px;
         margin: 0 0 30px 0;
+    }
+
+    .new.on .content .tit h2 {
+        animation: none;
     }
 
     .new .content .tit a {

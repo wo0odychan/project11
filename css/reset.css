@@ -33,6 +33,11 @@ body {
     line-height: 1;
     color: #222;
     font-family: 'Noto Sans KR', 'Roboto', 'Noto Serif KR', sans-serif;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-use-select: none;
+    user-select: none;
 }
 
 /* 시각장애인을 위한 대체 텍스트 */
