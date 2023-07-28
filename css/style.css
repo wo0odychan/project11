@@ -805,6 +805,7 @@
         padding: 100px 0;
     }
 
+
     .header .header_wrap {
         margin: 0;
         width: 100%;
@@ -949,9 +950,9 @@
     }
 
     .collections .tit {
-        top: 0;
+        top: 50%;
         left: 30px;
-        padding: 15px 0 40px 20px;
+        padding: 15px 0 30px 20px;
         font-size: 24px;
         line-height: 1.2;
         transform: translate(0, 0);
@@ -1035,6 +1036,8 @@
     .bag01 .content .tit h2 {
         font-weight: 500;
         font-size: 28px;
+        opacity: 1;
+        transform: translate(0, 0);
     }
 
     .bag01 .content .tit h2::before {
@@ -1046,6 +1049,8 @@
 
     .bag01 .content .tit p {
         line-height: 1.2;
+        opacity: 1;
+        transform: translate(0, 0);
     }
 
     .bag01 .detail {
@@ -1113,6 +1118,8 @@
     .bag02 .content .tit h2 {
         font-weight: 500;
         font-size: 28px;
+        opacity: 1;
+        transform: translate(0, 0);
     }
 
     .bag02 .content .tit h2::before {
@@ -1124,6 +1131,8 @@
 
     .bag02 .content .tit p {
         line-height: 1.2;
+        opacity: 1;
+        transform: translate(0, 0);
     }
 
     .bag02 .detail {
